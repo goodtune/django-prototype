@@ -1,16 +1,12 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
-"""
-
+from django.template import TemplateDoesNotExist
 from django.test import TestCase
+from django.test.utils import override_settings
 
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class PrototypeTest(TestCase):
+
+    urls = 'prototype.urls'
+
+    def test_template_does_not_exist(self):
+        with self.assertRaises(TemplateDoesNotExist):
+            res = self.client.get('/path/does/not/exist/')

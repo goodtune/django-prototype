@@ -9,3 +9,5 @@ DATABASES = {
 INSTALLED_APPS = (
     'prototype',
 )
+
+ROOT_URLCONF = 'urls'
