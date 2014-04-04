@@ -1,5 +1,0 @@
-language: python
-install:
-  - easy_install pip
-  - pip install setuptools
-script: python setup.py test
