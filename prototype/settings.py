@@ -11,3 +11,7 @@ INSTALLED_APPS = (
 )
 
 ROOT_URLCONF = 'urls'
+
+TEMPLATE_DIRS = (
+    'templates',
+)
