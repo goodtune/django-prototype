@@ -2,7 +2,7 @@
 Django Prototype
 ================
 
-.. image:: https://api.travis-ci.org/goodtune/django-prototype.svg
+.. image:: https://api.travis-ci.org/goodtune/django-prototype.png
     :alt: Build Status
     :target: https://travis-ci.org/goodtune/django-prototype
 
