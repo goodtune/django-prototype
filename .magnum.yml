@@ -1,4 +1,4 @@
 language: python
-env:
+install:
   - pip install setuptools
 script: python setup.py test
