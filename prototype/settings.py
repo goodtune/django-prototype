@@ -1,13 +1,21 @@
 DEBUG = True
 SECRET_KEY = 'a'
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    'static',
+]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
     },
 }
 
-INSTALLED_APPS = []
+INSTALLED_APPS = [
+    'django.contrib.staticfiles',
+]
+
 MIDDLEWARE_CLASSES = []
 
 ROOT_URLCONF = 'prototype.urls'
