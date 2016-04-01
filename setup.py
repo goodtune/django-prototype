@@ -12,6 +12,6 @@ setup(
     test_suite="prototype.runtests.runtests",
     include_package_data=True,
     install_requires=(
-        "Django>=1.4",
+        "Django>=1.9,<1.10",
     ),
 )

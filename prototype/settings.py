@@ -1,3 +1,4 @@
+DEBUG = True
 SECRET_KEY = 'a'
 
 DATABASES = {
@@ -6,12 +7,21 @@ DATABASES = {
     },
 }
 
-INSTALLED_APPS = (
-    'prototype',
-)
+INSTALLED_APPS = []
+MIDDLEWARE_CLASSES = []
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'prototype.urls'
 
-TEMPLATE_DIRS = (
-    'templates',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+            ],
+        },
+    },
+]

@@ -1,7 +1,8 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
-urlpatterns = patterns(
-    'prototype.views',
-    url(r'^$', 'prototype', {'path': ''}, name='index'),
-    url(r'^(?P<path>.+?)/$', 'prototype', name='prototype'),
-)
+from prototype.views import prototype
+
+urlpatterns = [
+    url(r'^$', prototype, {'path': ''}, name='prototype'),
+    url(r'^(?P<path>.*?)/$', prototype, name='prototype'),
+]
