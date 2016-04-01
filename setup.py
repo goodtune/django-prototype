@@ -16,5 +16,11 @@ setup(
     install_requires=(
         "Django>=1.9,<1.10",
         "PyYAML",
+        "livereload",
     ),
+    entry_points={
+        'console_scripts': [
+            'prototype = prototype.main:main',
+        ],
+    },
 )
