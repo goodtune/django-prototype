@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block document-title %}django-prototype{% endblock %}
+
+{% block page-title %}django-prototype{% endblock %}
+
+{% block content %}
+<p>Variable from <em>prototype.yml</em>: <strong>{{ myvar }}</strong>.</p>
+<p>Check other pages:</p>
+<ul>
+    {% for page in pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

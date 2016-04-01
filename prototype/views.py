@@ -1,16 +1,10 @@
-import os
+from django.shortcuts import render
 
-from django.views.generic import TemplateView
-
-
-class PrototypeView(TemplateView):
-    """
-    Simple ``TemplateView`` subclass that will determine the template path
-    dynamically based upon it's urlconf.
-    """
-
-    def get_template_names(self):
-        return os.path.join('prototype', self.kwargs['path'], 'index.html')
+from prototype.helpers import get_page
+from prototype.helpers import get_template
 
 
-prototype = PrototypeView.as_view()
+def prototype(request, path):
+    page = get_page(path)
+    context = page.get('context', {})
+    return render(request, get_template(path), context)

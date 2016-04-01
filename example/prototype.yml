@@ -1,0 +1,9 @@
+urls:
+  /:
+    context:
+      myvar: variable
+      pages:
+        - {url: '/example/', title: 'example.html'}
+        - {url: '/index/', title: 'index/index.html'}
+  /example/:
+  /index/:
