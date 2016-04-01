@@ -10,7 +10,7 @@
 <p>Check other pages:</p>
 <ul>
     {% for page in pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{% url page.name %}">{{ page.title }}</a></li>
     {% endfor %}
 </ul>
 <p>Static files works too:</p>

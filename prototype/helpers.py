@@ -2,6 +2,7 @@ import yaml
 import os.path
 
 from django.http import Http404
+from django.conf.urls import url
 
 
 def get_page(path):
@@ -22,3 +23,16 @@ def get_template(path):
     for template in candidates:
         if os.path.exists(os.path.join('templates', template)):
             return template
+
+
+def get_urls(view):
+    with open('prototype.yml') as f:
+        data = yaml.load(f)
+
+    urls = []
+    for path, page in data['urls'].items():
+        if page and 'name' in page:
+            pattern = r'^%s$' % path.lstrip('/')
+            kwargs = {'path': path.strip('/')}
+            urls.append(url(pattern, view, kwargs, name=page['name']))
+    return urls

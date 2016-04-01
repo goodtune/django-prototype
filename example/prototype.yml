@@ -3,7 +3,9 @@ urls:
     context:
       myvar: variable
       pages:
-        - {url: '/example/', title: 'example.html'}
-        - {url: '/index/', title: 'index/index.html'}
+        - {name: 'example', title: 'example.html'}
+        - {name: 'directory', title: 'index/index.html'}
   /example/:
+    name: example
   /index/:
+    name: directory
