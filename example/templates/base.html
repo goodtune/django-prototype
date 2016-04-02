@@ -1,7 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block document-title %}Untitled{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
   </head>
   <body>
     <h1>{% block page-title %}Untitled{% endblock %}</h1>

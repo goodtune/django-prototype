@@ -19,6 +19,8 @@ Features
 
 - Build-in Livereload_ support.
 
+- Build-in Sass_ support.
+
 - Possibility to provide context for Django templates.
 
 - `Django staticfiles`_ support.
@@ -106,4 +108,5 @@ url.
 
 
 .. _Livereload: http://livereload.readthedocs.org
+.. _Sass: http://sass-lang.com/
 .. _Django staticfiles: https://docs.djangoproject.com/en/1.9/ref/contrib/staticfiles/

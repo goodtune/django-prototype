@@ -17,6 +17,7 @@ setup(
         "Django>=1.9,<1.10",
         "PyYAML",
         "livereload",
+        'libsass',
     ),
     entry_points={
         'console_scripts': [
