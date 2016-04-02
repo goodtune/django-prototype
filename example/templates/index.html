@@ -9,21 +9,21 @@
 <h2>Features</h2>
 
 <ul>
-    <li>Context variables from <em>prototype.yml</em>: <strong>{{ myvar }}</strong>.</li>
-    <li>Support for Django urls with reverse names:
-        <ul>
-            {% for page in pages %}
-            <li><a href="{% url page.name %}">{{ page.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </li>
-    <li>Static files:
-        <p>
-            <a href="https://commons.wikimedia.org/wiki/File:Example.svg" target="_blank">
-                <img src="{% static "img/example.png" %}" alt="just another example" />
-            </a>
-        </p>
-    </li>
-    <li><a href="http://livereload.readthedocs.org/">Livereload</a></li>
+  <li>Context variables from <em>prototype.yml</em>: <strong>{{ myvar }}</strong>.</li>
+  <li>Support for Django urls with reverse names:
+    <ul>
+      {% for page in pages %}
+      <li><a href="{% url page.name %}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li>Static files:
+    <p>
+      <a href="https://commons.wikimedia.org/wiki/File:Example.svg" target="_blank">
+        <img src="{% static "img/example.png" %}" alt="just another example" />
+      </a>
+    </p>
+  </li>
+  <li><a href="http://livereload.readthedocs.org/">Livereload</a></li>
 </ul>
 {% endblock %}
