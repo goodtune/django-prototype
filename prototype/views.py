@@ -6,5 +6,5 @@ from prototype.helpers import get_template
 
 def prototype(request, path):
     page = get_page(path)
-    context = page.get('context', {})
+    context = page['context']
     return render(request, get_template(path), context)

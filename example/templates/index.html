@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block document-title %}django-prototype{% endblock %}
-
-{% block page-title %}django-prototype{% endblock %}
-
 {% block content %}
 <h2>Features</h2>
 
@@ -20,7 +16,7 @@
   <li>Static files and <a href="http://sass-lang.com/">Sass</a>:
     <p>
       <a href="https://commons.wikimedia.org/wiki/File:Example.svg" target="_blank">
-        <img src="{% static "img/example.png" %}" alt="just another example" />
+        <img class="frame" src="{% static "img/example.png" %}" alt="just another example" />
       </a>
     </p>
   </li>

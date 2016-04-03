@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
-{% block document-title %}Example{% endblock %}
-
-{% block page-title %}Inheritance{% endblock %}
-
 {% block content %}
-<p>See, it works!</p>
+<p>Another page!</p>
+<p><a href="{% url 'index' %}">Back to index</a></p>
 {% endblock %}

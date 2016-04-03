@@ -1,5 +1,6 @@
 urls:
   /:
+    name: index
     context:
       myvar: variable
       pages:
@@ -7,5 +8,13 @@ urls:
         - {name: 'directory', title: 'index/index.html'}
   /example/:
     name: example
+    context:
+      page_title: Example
   /index/:
     name: directory
+
+globals:
+  page_title: django-prototype
+  cdn:
+    twbs: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6
+    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2

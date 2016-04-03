@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
-{% block document-title %}Index{% endblock %}
-
-{% block page-title %}Index{% endblock %}
-
-{% block page-content %}
+{% block content %}
 <p>It works!</p>
+<p><a href="{% url 'index' %}">Back to index</a></p>
 {% endblock %}

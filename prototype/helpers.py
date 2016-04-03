@@ -10,9 +10,16 @@ def get_page(path):
     with open('prototype.yml') as f:
         data = yaml.load(f)
     try:
-        return data['urls'][url] or {}
+        page = data['urls'][url] or {
+            'context': {},
+        }
     except KeyError:
         raise Http404("Requested %s page not found." % url)
+
+    if 'globals' in data:
+        page['context'] = dict(data['globals'], **page.get('context', {}))
+
+    return page
 
 
 def get_template(path):
