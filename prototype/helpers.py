@@ -16,7 +16,7 @@ def get_page(path):
     except KeyError:
         raise Http404("Requested %s page not found." % url)
 
-    if 'globals' in data:
+    if 'globals' in data and page.get('type', 'html') == 'html':
         page['context'] = dict(data['globals'], **page.get('context', {}))
 
     return page
