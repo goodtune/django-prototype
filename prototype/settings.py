@@ -1,4 +1,10 @@
+DEBUG = True
 SECRET_KEY = 'a'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    'static',
+]
 
 DATABASES = {
     'default': {
@@ -6,12 +12,24 @@ DATABASES = {
     },
 }
 
-INSTALLED_APPS = (
-    'prototype',
-)
+INSTALLED_APPS = [
+    'django.contrib.staticfiles',
+]
 
-ROOT_URLCONF = 'urls'
+MIDDLEWARE_CLASSES = []
 
-TEMPLATE_DIRS = (
-    'templates',
-)
+ROOT_URLCONF = 'prototype.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+            ],
+        },
+    },
+]
